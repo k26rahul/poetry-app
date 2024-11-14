@@ -6,7 +6,10 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Read "{{title}}" by {{author}}</h1>
+    <a href="/titles/{{author}}">Go back</a>
+
+    <h1>Read <span style="color: red">{{title}}</span> by <span style="color: red">{{author}}</span></h1>
+
     {% for line in poetry.lines %} {{line}} <br />
     {% endfor %}
   </body>

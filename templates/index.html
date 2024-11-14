@@ -4,9 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      form {
+        display: inline-block;
+        padding: 20px;
+        border: 2px solid #333;
+        border-radius: 5px;
+      }
+      form div {
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
   <body>
     <h1>Poetry App</h1>
+
+    <form action="/search">
+      <div>
+        <label>
+          Title:
+          <input type="text" name="title" value="Sonnet" />
+        </label>
+      </div>
+      <div>
+        <input type="submit" value="Search" />
+      </div>
+    </form>
+
+    <h2>List of all poets</h2>
     <ul>
       {% for author in data.authors %}
       <li>
